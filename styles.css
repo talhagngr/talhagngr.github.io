@@ -61,6 +61,17 @@ header {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+    justify-content: center; /* This will horizontally align items in the center */
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.text-side, .image-side {
+    flex: 1; /* Each side takes up equal space */
+    display: flex;
+    justify-content: center; /* Center-align the content horizontally */
+    align-items: center; /* Center-align the content vertically */
+    padding: 20px; /* Add some padding around the content */
 }
 
 .text-side {
@@ -85,18 +96,6 @@ header {
     }
 
     .image-side img {
-        max-width: 100%;
-    }
-}
-
-/* Responsive adjustments can be made here */
-@media (max-width: 600px) {
-    .image-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image {
         max-width: 100%;
     }
 }
