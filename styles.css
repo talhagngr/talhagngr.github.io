@@ -57,6 +57,37 @@ header {
     opacity: 0;
     transition: visibility 0s, opacity 0.3s ease;
 }
+.day-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.text-side {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-side {
+    flex: 1;
+}
+
+.image-side img {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .day-entry {
+        flex-direction: column;
+    }
+
+    .image-side img {
+        max-width: 100%;
+    }
+}
 
 /* Responsive adjustments can be made here */
 @media (max-width: 600px) {
