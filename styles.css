@@ -2,16 +2,12 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #DBF9FC;
-}
-body {
-    background-color: rgb(150, 75, 0); /* Olive-like shade, more red than green */
-    font-family: Arial, sans-serif;
+    background-color: #DBF9FC; /* Choose the color you want for the body */
     line-height: 1.6;
-    margin: 0;
     padding: 0;
     color: #333; /* Text color */
 }
+
 header {
     text-align: center;
     background-color: #DBF9FC;
@@ -50,7 +46,7 @@ header {
 
 .image {
     width: 100%;
-    max-width: 300px;
+    max-width: 300px; /* Adjust as needed */
     transition: transform 0.3s ease;
     margin-bottom: -50px;
 }
@@ -65,80 +61,48 @@ header {
     opacity: 0;
     transition: visibility 0s, opacity 0.3s ease;
 }
+
 .day-entry {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
     flex-wrap: wrap;
-    background-color: #f0f0f0; /* Light grey background for the entry */
-    border: 1px solid #ccc; /* Border to distinguish entries */
-    padding: 20px; /* Padding inside the box */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
-    overflow: hidden; /* Ensures content fits within the border */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);    
 }
 
 .text-side {
-    flex: 1; /* Each side takes up equal space */
+    flex: 1;
     display: flex;
-    justify-content: center; /* Center-align the content horizontally */
-    align-items: center; /* Center-align the content vertically */
-    padding: 20px; /* Add some padding around the content */
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
 }
 
 .text-side h2 {
-    margin: 0;
-    color: #4CAF50; /* Green color for headers */
-    font-size: 24px; /* Larger font size for headers */
-    margin-bottom: 55px; /* Space between the header and the paragraph */
-    align-self: center; /* Align the header to the start of the flex container */
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
 .text-side p {
-    color: #D32F2F; /* Your desired color for paragraph text */
-    font-size: 16px; /* Your desired size for paragraph text */
-    margin-top: 10px; /* Space after the header */
-    align-self: flex-start; /* Align the paragraph to the start of the flex container */
+    color: #D32F2F;
+    font-size: 16px;
+}
 
 .image-side {
     flex: 1;
-    padding-left: 20px; /* Space between the text and the image */
-    text-align: right; /* Align the image to the right */
-    max-width: 50%; /* Maximum width of the image container */
-   /* display: flex; 
-    justify-content: center;
-    align-items: center; */
+    text-align: right;
 }
-    
+
 .image-side img {
     width: 100%;
-    max-width: 400px; /* Adjust as needed */
+    max-width: 400px;
     height: auto;
     border: 1px solid #ddd;
-    display: block; /* Removes bottom space under the image */
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .day-entry {
-        flex-direction: column;
-        text-align: center;
-    }
-
-     .text-side, .image-side {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box; /* Include padding in the width */
-        text-align: center;
-    }
-
-    .image-side img {
-        max-width: 80%; /* Adjust the image size on smaller screens */
-        margin: 0 auto; /* Center the image */
-        padding-top: 20px; /* Space between the text and the image on smaller screens */
-    }
-    .image-side img {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-}
+@media (max-width: 768px)
