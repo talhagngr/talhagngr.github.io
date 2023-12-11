@@ -68,10 +68,13 @@ header {
 .day-entry {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
-    justify-content: center; /* This will horizontally align items in the center */
+    justify-content: center;
     margin-bottom: 50px;
     flex-wrap: wrap;
+    background-color: #f0f0f0; /* Light grey background for the entry */
+    border: 1px solid #ccc; /* Border to distinguish entries */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */    
 }
 
 .text-side, .image-side {
@@ -91,10 +94,11 @@ header {
     margin: 0;
     color: #333; /* Your desired color for headers */
     font-size: 24px; /* Your desired size for headers */
+    color: #4CAF50;
 }
 
 .text-side p {
-    color: #666; /* Your desired color for paragraph text */
+    color: #D32F2F; /* Your desired color for paragraph text */
     font-size: 16px; /* Your desired size for paragraph text */
     margin-top: 10px; /* Space after the header */
 
