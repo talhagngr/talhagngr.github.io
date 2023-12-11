@@ -92,18 +92,23 @@ header {
 
 .text-side h2 {
     margin: 0;
-    color: #333; /* Your desired color for headers */
-    font-size: 24px; /* Your desired size for headers */
-    color: #4CAF50;
+    color: #4CAF50; /* Green color for headers */
+    font-size: 24px; /* Larger font size for headers */
+    margin-bottom: 15px; /* Space between the header and the paragraph */
+    align-self: flex-start; /* Align the header to the start of the flex container */
 }
 
 .text-side p {
     color: #D32F2F; /* Your desired color for paragraph text */
     font-size: 16px; /* Your desired size for paragraph text */
     margin-top: 10px; /* Space after the header */
+    align-self: flex-start; /* Align the paragraph to the start of the flex container */
 
 .image-side {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-side img {
