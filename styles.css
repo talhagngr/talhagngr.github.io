@@ -77,17 +77,20 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */    
 }
 
-.text-side, .image-side {
+.text-side {
     flex: 1; /* Each side takes up equal space */
     display: flex;
     justify-content: center; /* Center-align the content horizontally */
     align-items: center; /* Center-align the content vertically */
     padding: 20px; /* Add some padding around the content */
 }
-
-.text-side {
+.image-side {
     flex: 1;
-    padding-right: 20px;
+    padding-left: 20px; /* Space between the text and the image */
+    text-align: right; /* Align the image to the right */
+   /* display: flex; 
+    justify-content: center;
+    align-items: center; */
 }
 
 .text-side h2 {
@@ -104,36 +107,34 @@ header {
     margin-top: 10px; /* Space after the header */
     align-self: flex-start; /* Align the paragraph to the start of the flex container */
 
-.image-side {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .image-side img {
     width: 100%;
     max-width: 400px; /* Adjust as needed */
     height: auto;
+    border: 1px solid #ddd;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
     .day-entry {
         flex-direction: column;
+        text-align: center;
     }
 
      .text-side, .image-side {
         width: 100%;
         padding: 10px;
         box-sizing: border-box; /* Include padding in the width */
+        text-align: center;
     }
 
     .image-side img {
         max-width: 80%; /* Adjust the image size on smaller screens */
         margin: 0 auto; /* Center the image */
+        padding-top: 20px; /* Space between the text and the image on smaller screens */
     }
     .image-side img {
-        max-width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
     }
 }
