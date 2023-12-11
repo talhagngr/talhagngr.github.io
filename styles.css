@@ -4,7 +4,14 @@ body, html {
     font-family: Arial, sans-serif;
     background-color: #DBF9FC;
 }
-
+body {
+    background-color: rgb(150, 75, 0); /* Olive-like shade, more red than green */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Text color */
+}
 header {
     text-align: center;
     background-color: #DBF9FC;
