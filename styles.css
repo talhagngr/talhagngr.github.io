@@ -36,16 +36,12 @@ header {
 }
 
 .image-container {
-    display: inline-block; /* Align images side by side */
     width: 30%; /* Adjust the width as necessary */
     margin: 0 1.66%; /* Add margins for spacing */
     vertical-align: top; /* Align the tops of the images */
-    flex: 1; /* Each container will grow to fill the space */
     margin: 10px; /* Adds margin between image containers */
     max-width: calc(33% - 20px); /* Adjust the width to be one-third minus the margin */
     box-sizing: border-box; /* This ensures padding and borders are included in the width */  
-    /*  position: relative;
-    margin: 10px; */
 }
 
  .image-container img {
