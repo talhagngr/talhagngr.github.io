@@ -10,8 +10,15 @@ body, html {
 
 header {
     text-align: center;
-    background-color: #DBF9FC;
-    padding: 20px;
+    background-color: #fddde6; /* Mellow pink background */
+    text-align: center;
+    padding: 20px 0; /* Padding on top and bottom */
+    margin-bottom: 30px; /* Space between header and content */
+}
+
+header h1, header h2 {
+    color: #333; /* Color for the text */
+    margin: 0; /* Removing default margins */
 }
 
 .image-gallery {
