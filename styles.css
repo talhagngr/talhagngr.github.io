@@ -10,28 +10,42 @@ body, html {
 
 header {
     text-align: center;
-    background-color: #fddde6; /* Mellow pink background */
-    text-align: center;
     padding: 20px 0; /* Padding on top and bottom */
     margin-bottom: 30px; /* Space between header and content */
+    
 }
 
 header h1, header h2 {
+    display: inline-block; /* Makes the element only as wide as the text */
+    background-color: #fddde6; /* Mellow pink background */
+    margin: 0; /* Remove default margins */
+    padding: 0.5em 1em; /* Add some padding around the text */
     color: #333; /* Color for the text */
-    margin: 0; /* Removing default margins */
 }
 
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
+    overflow: hidden; /* Ensures content fits within the parent container */
+    padding: 20px 0; /* Add padding to match the header's vertical spacing */
+    /*background-color: #yourBlueishColor;  Replace with your actual color code */
 }
 
 .image-container {
-    position: relative;
-    margin: 10px;
+    display: inline-block; /* Align images side by side */
+    width: 30%; /* Adjust the width as necessary */
+    margin: 0 1.66%; /* Add margins for spacing */
+    vertical-align: top; /* Align the tops of the images */
+   /*  position: relative;
+    margin: 10px; */
 }
+ .image-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove any default inline spacing */
+}
+
 
 .image-link {
     display: block;
