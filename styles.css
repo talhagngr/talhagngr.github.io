@@ -27,10 +27,11 @@ header {
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center; /* Aligns items vertically */
     overflow: hidden; /* Ensures content fits within the parent container */
-    padding: 20px 0; /* Add padding to match the header's vertical spacing */
-    padding-bottom: 20px; /* Adds space below the image gallery */
+    padding: 20px ; /* Add padding to match the header's vertical spacing */
+    padding-bottom: 50px; /* Adds space below the image gallery */
     /*background-color: #yourBlueishColor;  Replace with your actual color code */
 }
 
@@ -39,16 +40,18 @@ header {
     width: 30%; /* Adjust the width as necessary */
     margin: 0 1.66%; /* Add margins for spacing */
     vertical-align: top; /* Align the tops of the images */
+    flex: 1; /* Each container will grow to fill the space */
+    margin: 10px; /* Adds margin between image containers */
+    max-width: calc(33% - 20px); /* Adjust the width to be one-third minus the margin */
    /*  position: relative;
     margin: 10px; */
 }
 
  .image-container img {
-    width: 100%;
-    height: auto;
-    display: block; /* Remove any default inline spacing */
-}
-
+    width: 100%; /* Makes the image fill its container */
+    height: auto; /* Keeps the image's aspect ratio */
+    display: block; /* Removes any default inline spacing */
+ }
 .image-container:last-child {
     margin-bottom: 30px; /* Adjust the space below the third image */
 }
