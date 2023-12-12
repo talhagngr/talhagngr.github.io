@@ -15,13 +15,14 @@ header {
     
 }
 
-header h1, header h2 {
-    display: inline-block; /* Makes the element only as wide as the text */
+.header-text {
     background-color: #fddde6; /* Mellow pink background */
-    margin: 0; /* Remove default margins */
-    padding: 0.5em 1em; /* Add some padding around the text */
-    color: #333; /* Color for the text */
+    display: inline-block; /* Allows the div to fit the content size */
+    padding: 10px 20px; /* Adjust the padding as needed */
+    margin: 0 auto; /* Center the div */
+    text-align: center; /* Center the text within the div */
 }
+
 
 .image-gallery {
     display: flex;
@@ -29,6 +30,7 @@ header h1, header h2 {
     justify-content: space-around;
     overflow: hidden; /* Ensures content fits within the parent container */
     padding: 20px 0; /* Add padding to match the header's vertical spacing */
+    padding-bottom: 20px; /* Adds space below the image gallery */
     /*background-color: #yourBlueishColor;  Replace with your actual color code */
 }
 
@@ -40,12 +42,16 @@ header h1, header h2 {
    /*  position: relative;
     margin: 10px; */
 }
+
  .image-container img {
     width: 100%;
     height: auto;
     display: block; /* Remove any default inline spacing */
 }
 
+.image-container:last-child {
+    margin-bottom: 30px; /* Adjust the space below the third image */
+}
 
 .image-link {
     display: block;
