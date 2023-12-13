@@ -27,7 +27,7 @@ header {
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center; /* Aligns items vertically */
     overflow: hidden; /* Ensures content fits within the parent container */
   /* Add padding to match the header's vertical spacing */
@@ -37,7 +37,7 @@ header {
 
 .image-container {
     width: 30%; /* Adjust the width as necessary */
-    margin: 0 1.66%; /* Add margins for spacing */
+     /* Add margins for spacing */
     vertical-align: top; /* Align the tops of the images */
     margin: 10px; /* Adds margin between image containers */
      /* Adjust the width to be one-third minus the margin */
