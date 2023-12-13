@@ -40,7 +40,7 @@ header {
     margin: 0 1.66%; /* Add margins for spacing */
     vertical-align: top; /* Align the tops of the images */
     margin: 10px; /* Adds margin between image containers */
-    max-width: calc(33% - 20px); /* Adjust the width to be one-third minus the margin */
+     /* Adjust the width to be one-third minus the margin */
     box-sizing: border-box; /* This ensures padding and borders are included in the width */  
 }
 
