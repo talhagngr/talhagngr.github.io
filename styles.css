@@ -27,28 +27,24 @@ header {
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center; /* Aligns items vertically */
-    overflow: hidden; /* Ensures content fits within the parent container */
-  /* Add padding to match the header's vertical spacing */
-    padding-bottom: 50px; /* Adds space below the image gallery */
-    background-color: #f8f8f8; /* Replace with your actual color code */
+    justify-content: center; /* This will center the items */
+    align-items: center;
+    padding: 20px 0; /* Adjust top and bottom padding as needed */
+    padding-bottom: 50px; /* Additional bottom padding */
+    background-color: #f8f8f8;
 }
 
 .image-container {
-    width: 30%; /* Adjust the width as necessary */
-     /* Add margins for spacing */
-    vertical-align: top; /* Align the tops of the images */
-    margin: 10px; /* Adds margin between image containers */
-     /* Adjust the width to be one-third minus the margin */
-    box-sizing: border-box; /* This ensures padding and borders are included in the width */  
+    width: calc(33.333% - 20px); /* Adjusting for margin; assuming 10px margin on each side */
+    margin: 10px; /* Margins on all sides */
+    box-sizing: border-box;
 }
 
- .image-container img {
-    width: 100%; /* Makes the image fill its container */
-    height: auto; /* Keeps the image's aspect ratio */
-    display: block; /* Removes any default inline spacing */
- }
+.image-container img {
+    width: 100%; /* Image will fill the container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Block-level element to fit the width */
+}
 
 .image-link {
     display: block;
