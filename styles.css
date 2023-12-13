@@ -30,9 +30,9 @@ header {
     justify-content: center;
     align-items: center; /* Aligns items vertically */
     overflow: hidden; /* Ensures content fits within the parent container */
-    padding: 20px 0; /* Add padding to match the header's vertical spacing */
+  /* Add padding to match the header's vertical spacing */
     padding-bottom: 50px; /* Adds space below the image gallery */
-    /*background-color: #yourBlueishColor;  Replace with your actual color code */
+    background-color: #f8f8f8; /* Replace with your actual color code */
 }
 
 .image-container {
