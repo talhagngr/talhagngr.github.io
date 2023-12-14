@@ -27,7 +27,7 @@ header {
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly; /* This will evenly distribute space between and around items */
+     /* This will evenly distribute space between and around items */
     align-items: center; /* Aligns items vertically */
     padding: 20px; /* Add padding to match the header's vertical spacing */
     background-color: #f8f8f8; /* Replace with your actual color code */
