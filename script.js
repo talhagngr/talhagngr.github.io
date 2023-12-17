@@ -11,7 +11,6 @@ document.getElementById('spotifyLoginButton').addEventListener('click', function
     window.location.href = authUrl;
 });
 
-
 let selectedPlaylists = [];
 
 function fetchUserPlaylists(accessToken) {
@@ -64,7 +63,7 @@ function getAuthorizationCode() {
 
 function exchangeAuthCodeForToken(authCode) {
     const clientId = '6aaaeb6d3a884d5d94bf46bcdab165e1';
-    const clientSecret = 'bee9e6ab487d4a3aa70fc310e61fc950'; // Use a secure method to store and retrieve your client secret
+    const clientSecret = 'bee9e6ab487d4a3aa70fc310e61fc950'; // Exposed client secret for personal use
 
     const body = new URLSearchParams();
     body.append('grant_type', 'authorization_code');
@@ -73,7 +72,10 @@ function exchangeAuthCodeForToken(authCode) {
 
     fetch('https://accounts.spotify.com/api/token', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + (Buffer.from(clientId + ':' + clientSecret).toString('base64'))
+        },
         body: body
     })
     .then(response => {
