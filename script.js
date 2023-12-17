@@ -35,16 +35,49 @@ function displayPlaylists(playlists) {
     container.innerHTML = ''; // Clear existing content
 
     playlists.forEach(playlist => {
-        const playlistElement = document.createElement('div');
-        playlistElement.className = 'playlist-item';
-        playlistElement.textContent = playlist.name;
-        playlistElement.onclick = () => selectPlaylist(playlist);
-        container.appendChild(playlistElement);
+        // Create a container div for each playlist item
+        const playlistContainer = document.createElement('div');
+        playlistContainer.className = 'playlist-item';
+
+        // Create a checkbox for the playlist
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.value = playlist.id; // Use a unique identifier for the playlist
+        checkbox.addEventListener('change', () => {
+            // Handle checkbox change event to track selected playlists
+            if (checkbox.checked) {
+                selectPlaylist(playlist.id); // Pass the playlist ID to the selectPlaylist function
+            } else {
+                deselectPlaylist(playlist.id); // Pass the playlist ID to the deselectPlaylist function
+            }
+        });
+
+        // Create a label for the checkbox with the playlist name
+        const label = document.createElement('label');
+        label.textContent = playlist.name;
+
+        // Append the checkbox and label to the playlist container
+        playlistContainer.appendChild(checkbox);
+        playlistContainer.appendChild(label);
+
+        // Append the playlist container to the main container
+        container.appendChild(playlistContainer);
     });
 }
 
-function selectPlaylist(playlist) {
-    selectedPlaylists.push(playlist);
+function selectPlaylist(playlistId) {
+    // Add the playlist ID to the selectedPlaylists array
+    selectedPlaylists.push(playlistId);
+    console.log('Selected Playlists:', selectedPlaylists);
+    // Update the UI or add more functionality here
+}
+
+function deselectPlaylist(playlistId) {
+    // Remove the playlist ID from the selectedPlaylists array
+    const index = selectedPlaylists.indexOf(playlistId);
+    if (index !== -1) {
+        selectedPlaylists.splice(index, 1);
+    }
     console.log('Selected Playlists:', selectedPlaylists);
     // Update the UI or add more functionality here
 }
