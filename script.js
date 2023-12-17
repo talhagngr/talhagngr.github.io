@@ -1,6 +1,16 @@
 document.getElementById('spotifyLoginButton').addEventListener('click', function() {
-    window.location.href = 'https://accounts.spotify.com/authorize?client_id=6aaaeb6d3a884d5d94bf46bcdab165e1&response_type=code&redirect_uri=https://talhagngr.github.io/&scope=user-library-read%20playlist-read-private%20playlist-read-collaborative';
+    var clientId = '6aaaeb6d3a884d5d94bf46bcdab165e1'; // Your client ID
+    var redirectUri = encodeURIComponent('https://talhagngr.github.io/'); // URL encode the redirect URI
+    var scopes = 'user-library-read playlist-read-private playlist-read-collaborative'; // Scopes
+    var authUrl = 'https://accounts.spotify.com/authorize' +
+                  '?client_id=' + clientId +
+                  '&response_type=code' +
+                  '&redirect_uri=' + redirectUri +
+                  '&scope=' + encodeURIComponent(scopes); // URL encode the scopes
+
+    window.location.href = authUrl;
 });
+
 
 let selectedPlaylists = [];
 
