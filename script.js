@@ -9,3 +9,15 @@ function fetchUserPlaylists(accessToken) {
     .then(response => response.json())
     .then(data => data.items); // 'items' will contain the playlists
 }
+
+function getAuthorizationCode() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const authCode = urlParams.get('code');
+    if (authCode) {
+        console.log("Authorization Code:", authCode);
+        // You can now use the authCode for further processing
+    }
+}
+
+window.onload = getAuthorizationCode; // Call the function when the page loads
