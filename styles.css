@@ -124,4 +124,15 @@ header {
     border: 1px solid #ddd;
 }
 
+.playlist-container {
+    margin: 20px;
+    /* Add more styling as per your design preference */
+}
+.playlist-item {
+    cursor: pointer;
+    margin: 10px 0;
+    /* Add more styling for playlist items */
+}
+
+
 @media (max-width: 768px)
