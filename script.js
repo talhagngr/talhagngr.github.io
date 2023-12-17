@@ -70,11 +70,13 @@ function exchangeAuthCodeForToken(authCode) {
     body.append('code', authCode);
     body.append('redirect_uri', 'https://talhagngr.github.io/');
 
+    const authString = btoa(clientId + ':' + clientSecret); // Encode credentials in Base64
+
     fetch('https://accounts.spotify.com/api/token', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': 'Basic ' + (Buffer.from(clientId + ':' + clientSecret).toString('base64'))
+            'Authorization': 'Basic ' + authString // Use Base64-encoded credentials
         },
         body: body
     })
