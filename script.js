@@ -14,7 +14,7 @@ document.getElementById('spotifyLoginButton').addEventListener('click', function
 let selectedPlaylists = [];
 
 // Add a YouTube API key here
-const youtubeApiKey = 'YOUR_YOUTUBE_API_KEY';
+const youtubeApiKey = 'AIzaSyC6P8DieyB9R6dGogTwtky3vS1o0kAm6eU';
 
 async function searchYouTube(trackName) {
     // ... [YouTube search function code]
