@@ -13,6 +13,14 @@ document.getElementById('spotifyLoginButton').addEventListener('click', function
 
 let selectedPlaylists = [];
 
+document.getElementById('transferButton').addEventListener('click', function() {
+    if (selectedPlaylists.length === 0) {
+        alert('Please select at least one playlist.');
+        return;
+    }
+    initiateYouTubeOAuth();
+});
+
 // Add a YouTube API key here
 const youtubeApiKey = 'AIzaSyC6P8DieyB9R6dGogTwtky3vS1o0kAm6eU';
 
