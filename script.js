@@ -18,14 +18,47 @@ const youtubeApiKey = 'AIzaSyC6P8DieyB9R6dGogTwtky3vS1o0kAm6eU';
 
 async function searchYouTube(trackName) {
     // ... [YouTube search function code]
+    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(trackName)}&key=${youtubeApiKey}`);
+    const data = await response.json();
+    return data.items.map(item => item.id.videoId);
 }
 
 async function createYouTubePlaylist(title, description, accessToken) {
     // ... [YouTube create playlist function code]
+ const response = await fetch(`https://www.googleapis.com/youtube/v3/playlists?part=snippet,status`, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${accessToken}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            snippet: {
+                title: title,
+                description: description
+            },
+            status: {
+                privacyStatus: 'private'
+            }
+        })
+    });
+    const data = await response.json();
+    return data.id;
 }
 
 async function addTrackToYouTubePlaylist(playlistId, trackVideoId, accessToken) {
     // ... [YouTube add track to playlist function code]
+const response = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet`, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${accessToken}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            snippet: {
+                playlistId: playlistId,
+                resourceId: {
+                    kind: 'youtube#video',
+                    videoId: trackVideoId
 }
 
 function fetchUserPlaylists(accessToken) {
